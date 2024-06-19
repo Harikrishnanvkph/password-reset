@@ -4,7 +4,7 @@ import axios from "axios";
 async function login(credential,password){
     const status = await axios(
         {
-            url : "http://localhost:3000/login",
+            url : "https://password-reset-server-qhcc.onrender.com/login",
             method : "post",
             data : {
                 mail : credential,
@@ -17,7 +17,7 @@ async function login(credential,password){
 
 async function forgotPass(mail){
     const status = await axios({
-        url : "http://localhost:3000/password_reset",
+        url : "https://password-reset-server-qhcc.onrender.com/password_reset",
         method : "post",
         data : {
             mail : mail
@@ -28,7 +28,7 @@ async function forgotPass(mail){
 
 async function checkSecretKey(mail,secretKey){
     const status = await axios({
-        url : "http://localhost:3000/checkKey",
+        url : "https://password-reset-server-qhcc.onrender.com/checkKey",
         method : "post",
         data : {
             mail : mail,
@@ -40,7 +40,7 @@ async function checkSecretKey(mail,secretKey){
 
 async function resetPass(mail,pass){
     const status = await axios({
-        url : "http://localhost:3000/set/password",
+        url : "https://password-reset-server-qhcc.onrender.com/set/password",
         method : "post",
         data : {
             mail : mail,
@@ -52,7 +52,7 @@ async function resetPass(mail,pass){
 
 async function createAccount(mail,name,pass){
     const status = await axios({
-        url : "http://localhost:3000/createUser",
+        url : "https://password-reset-server-qhcc.onrender.com/createUser",
         method : "post",
         data : {
             mail : mail,
