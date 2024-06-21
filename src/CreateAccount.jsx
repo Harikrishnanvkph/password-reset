@@ -17,9 +17,6 @@ export function CreateAccount(){
         if(name === "" || mail === "" || pass === ""){
             caMessage.current.textContent = "Input Fields cannot be EMPTY"
             caMessage.current.classList.add("error-message")
-        }else if(!mail.endsWith("@gmail.com")){
-            caMessage.current.textContent = "Invalid GMAIL Address"
-            caMessage.current.classList.add("error-message")
         }else{
             setIsLoading(true);
             const create = await new Promise((resolve)=>{
